@@ -1,0 +1,9 @@
+{
+    "time": "2025-05-25T06:00",
+    "interval": 900,
+    "temperature": 33.0,
+    "windspeed": 7.0,
+    "winddirection": 145,
+    "is_day": 1,
+    "weathercode": 3
+}

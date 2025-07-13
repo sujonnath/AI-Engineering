@@ -1,0 +1,41 @@
+# Import Libraries
+#pip install scikit-learn
+
+import numpy as np
+
+from sklearn.linear_model import LinearRegression
+
+# x = np.array([[1],[2],[3],[4],[5]])
+# y = np.array([[35],[45],[55],[65],[80]])
+
+#x = np.array([[2.4],[5.5],[4.1],[7.3]])
+#y = np.array([[24],[41],[33],[68]])
+
+x = np.array([[2],[3],[4],[5],[6],[7],[8],[9],[10],[11],[12],[13],[14],[15]])
+y = np.array([  [4],[6],[8],[10],[12],[14],[16],[18],[20],[22],[24],[26],[28],[30]])
+
+model  = LinearRegression()
+model.fit(x,y)
+
+y_pred = model.predict(x)
+print(y_pred)
+
+# Depth MathmaticalExplanation
+p = np.array([[1],[2],[3],[4],[5]])
+q = np.array([[35],[45],[55],[65],[80]])
+
+x_mean = np.mean(p)
+y_mean = np.mean(q)
+numerator = np.sum( (x-x_mean)*(y-y_mean))
+denominator = np.sum((x-x_mean)**2)
+
+m = numerator/denominator
+b=y_mean-m*x_mean
+print("\n")
+print('slope(m)',m)
+print("\n")
+print('intercept(b)',b)
+
+p_new = 7
+q_pred = m*p_new+b
+print('Predicted value: ',q_pred)

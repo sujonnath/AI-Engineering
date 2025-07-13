@@ -1,0 +1,2 @@
+Day 1: I started learning Python!
+Day 2: I learned how to write files.
